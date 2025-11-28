@@ -1,14 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center">
+    android:background="@color/window_background"
+    android:padding="16dp">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Aquí veremos Vistas de Colección"
-        android:textSize="24sp" />
+        android:orientation="vertical">
 
-</LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="RecyclerView: El Pilar de las Listas"
+            android:textColor="@color/text_title"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp"/>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardBackgroundColor="@color/card_background"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="RecyclerView es el componente más importante para mostrar listas de datos. Es la forma moderna, eficiente y recomendada por Google para cualquier tipo de lista, desde un simple listado vertical hasta complejas cuadrículas.\n\n¿Por qué es tan importante?\nA diferencia de su predecesor, ListView, RecyclerView es extremadamente eficiente porque recicla las vistas. En lugar de crear una vista nueva para cada elemento de la lista (lo que consumiría mucha memoria), reutiliza las vistas que ya no están en pantalla."
+                    android:lineSpacingExtra="4dp"
+                    android:textColor="@color/text_body"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Body1" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Los 3 Pilares del RecyclerView:\n1. Adapter: Es el puente entre tus datos (una lista, por ejemplo) y el RecyclerView. Se encarga de crear las vistas para cada elemento y de llenarlas con los datos correctos.\n\n2. ViewHolder: Es un objeto que almacena las referencias a las vistas de cada item (como los TextViews o ImageView). Esto evita tener que buscarlas repetidamente con findViewById(), lo que supone una gran optimización.\n\n3. LayoutManager: Determina cómo se posicionan los elementos. Los más comunes son LinearLayoutManager (para listas verticales u horizontales) y GridLayoutManager (para cuadrículas)."
+                    android:lineSpacingExtra="4dp"
+                    android:textColor="@color/text_body"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Body1" />
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ejemplo Práctico"
+            android:textColor="@color/text_title"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"/>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            app:cardBackgroundColor="@color/card_background"
+            app:cardElevation="4dp">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_view_main_example"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

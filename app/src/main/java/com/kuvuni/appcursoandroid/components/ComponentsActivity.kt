@@ -33,7 +33,6 @@ class ComponentsActivity : BaseActivity() {
             ComponentMenuItem("Switch", R.drawable.ic_components_switch, SwitchExampleActivity::class.java),
             ComponentMenuItem("Spinner", R.drawable.ic_components_spinner, SpinnerExampleActivity::class.java),
             ComponentMenuItem("ScrollView", R.drawable.ic_components_scroll, ScrollExampleActivity::class.java),
-            ComponentMenuItem("RecyclerView", R.drawable.ic_components_recyclerview, RecyclerViewExampleActivity::class.java),
             ComponentMenuItem("ListView", R.drawable.ic_components_listview, ListViewExampleActivity::class.java),
             ComponentMenuItem("GridView", R.drawable.ic_components_gridview, GridViewExampleActivity::class.java)
         )
