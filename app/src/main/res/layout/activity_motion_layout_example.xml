@@ -14,7 +14,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Intents y Navegación"
+            android:text="Ejemplo de MotionLayout"
             android:textColor="@color/text_title"
             android:textSize="24sp"
             android:textStyle="bold"
@@ -36,7 +36,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Un Intent es un objeto de mensajería que se usa para solicitar una acción a otro componente de la app. Es la base de la navegación en Android.\n\nTipos de Intents:\n• Explícito: Se especifica el componente exacto que debe recibir el intent (ej: SecondActivity::class.java). Se usa para navegar dentro de tu propia app.\n\n• Implícito: No se especifica el componente. En su lugar, se declara una acción general a realizar (ej: ver una URL, compartir texto), permitiendo que otra app en el dispositivo la maneje."
+                    android:text="MotionLayout es un layout de la librería ConstraintLayout que permite crear animaciones complejas y fluidas. Funciona describiendo las transiciones entre diferentes estados de un layout en un archivo XML separado llamado MotionScene.\n\nConceptos Clave:\n• MotionScene: Un archivo XML que define la animación. Contiene uno o más Transitions.\n• Transition: Define el cambio de un estado a otro (ej: de 'start' a 'end'), la duración y cómo se activa (ej: con un clic).\n• ConstraintSet: Define el estado de las vistas en un punto concreto (ej: la posición y tamaño de un botón al inicio o al final)."
                     android:lineSpacingExtra="4dp"
                     android:textColor="@color/text_body"
                     android:textAppearance="@style/TextAppearance.MaterialComponents.Body1" />
@@ -47,7 +47,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Ejemplos Prácticos"
+            android:text="Ejemplo Práctico"
             android:textColor="@color/text_title"
             android:textSize="20sp"
             android:textStyle="bold"
@@ -55,44 +55,22 @@
 
         <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="300dp"
             app:cardBackgroundColor="@color/card_background"
             app:cardElevation="4dp">
 
-            <LinearLayout
+            <androidx.constraintlayout.motion.widget.MotionLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="16dp">
+                android:layout_height="match_parent"
+                app:layoutDescription="@xml/activity_motion_layout_example_scene">
 
-                <Button
-                    android:id="@+id/btn_explicit_intent"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Navegar a otra pantalla (Explícito)"
-                    android:layout_marginBottom="8dp"/>
+                <View
+                    android:id="@+id/motion_view"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:background="@color/accent" />
 
-                <Button
-                    android:id="@+id/btn_open_url"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Abrir una página web (Implícito)"
-                    android:layout_marginBottom="8dp"/>
-
-                <Button
-                    android:id="@+id/btn_share_text"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Compartir texto (Implícito)"
-                    android:layout_marginBottom="8dp"/>
-
-                <Button
-                    android:id="@+id/btn_nav_component_example"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Ejemplo con Navigation Component"/>
-
-            </LinearLayout>
+            </androidx.constraintlayout.motion.widget.MotionLayout>
 
         </com.google.android.material.card.MaterialCardView>
 

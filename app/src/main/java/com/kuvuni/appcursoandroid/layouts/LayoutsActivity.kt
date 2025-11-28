@@ -30,7 +30,9 @@ class LayoutsActivity : BaseActivity() {
             LayoutMenuItem("RelativeLayout", R.drawable.ic_layouts_relative, RelativeLayoutExampleActivity::class.java),
             LayoutMenuItem("FrameLayout", R.drawable.ic_layouts_frame, FrameLayoutExampleActivity::class.java),
             LayoutMenuItem("TableLayout", R.drawable.ic_layouts_table, TableLayoutExampleActivity::class.java),
-            LayoutMenuItem("GridLayout", R.drawable.ic_layouts_grid, GridLayoutExampleActivity::class.java)
+            LayoutMenuItem("GridLayout", R.drawable.ic_layouts_grid, GridLayoutExampleActivity::class.java),
+            LayoutMenuItem("CoordinatorLayout", R.drawable.ic_layouts_coordinator, CoordinatorLayoutExampleActivity::class.java),
+            LayoutMenuItem("MotionLayout", R.drawable.ic_layouts_motion, MotionLayoutExampleActivity::class.java)
         )
 
         recyclerView.adapter = LayoutsMenuAdapter(menuItems)

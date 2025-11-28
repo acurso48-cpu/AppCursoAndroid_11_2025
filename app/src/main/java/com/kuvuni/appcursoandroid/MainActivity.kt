@@ -33,11 +33,11 @@ class MainActivity : BaseActivity() {
         recyclerView.layoutManager = GridLayoutManager(this, 2) // 2 columnas
 
         val menuItems = listOf(
-            MainMenuItem("Layouts", android.R.drawable.ic_menu_gallery, LayoutsActivity::class.java),
-            MainMenuItem("Components", android.R.drawable.ic_menu_manage, ComponentsActivity::class.java),
+            MainMenuItem("Layouts", R.drawable.ic_layouts_linear, LayoutsActivity::class.java),
+            MainMenuItem("Components", R.drawable.ic_components_button, ComponentsActivity::class.java),
             MainMenuItem("Lifecycle", android.R.drawable.ic_menu_rotate, LifecycleActivity::class.java),
-            MainMenuItem("Navigation", android.R.drawable.ic_menu_directions, NavigationActivity::class.java),
-            MainMenuItem("RecyclerView", android.R.drawable.ic_menu_sort_by_size, RecyclerViewActivity::class.java),
+            MainMenuItem("Intents y Navegación", R.drawable.ic_intents, NavigationActivity::class.java),
+            MainMenuItem("RecyclerView", R.drawable.ic_components_recyclerview, RecyclerViewActivity::class.java),
             MainMenuItem("Persistence", android.R.drawable.ic_menu_save, PersistenceActivity::class.java),
             MainMenuItem("APIs", android.R.drawable.ic_menu_share, ApisActivity::class.java),
             MainMenuItem("Permissions", android.R.drawable.ic_lock_lock, PermissionsActivity::class.java),
