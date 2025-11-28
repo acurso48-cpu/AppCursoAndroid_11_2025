@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/window_background"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ejemplo de GridLayout"
+            android:textColor="@color/text_title"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp"/>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardBackgroundColor="@color/card_background"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="GridLayout es un layout que coloca a sus hijos en una cuadrícula rectangular. Es muy útil para diseños tipo tablero o para alinear elementos en más de una fila o columna.\n\nRecomendaciones:\n- Ideal para interfaces que se benefician de una estructura de rejilla, como calculadoras, teclados o galerías de imágenes simples.\n- Es más flexible que TableLayout y más sencillo que ConstraintLayout para diseños de cuadrícula.\n- Para listas de datos grandes en formato de rejilla, es mejor usar RecyclerView con un GridLayoutManager por su eficiencia."
+                    android:lineSpacingExtra="4dp"
+                    android:textColor="@color/text_body"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Body1" />
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ejemplo Práctico"
+            android:textColor="@color/text_title"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"/>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/card_background"
+            app:cardElevation="4dp">
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="3"
+                android:rowCount="3"
+                android:alignmentMode="alignMargins"
+                android:columnOrderPreserved="false"
+                android:padding="16dp">
+
+                <Button android:text="1" android:layout_width="0dp" android:layout_columnWeight="1"/>
+                <Button android:text="2" android:layout_width="0dp" android:layout_columnWeight="1"/>
+                <Button android:text="3" android:layout_width="0dp" android:layout_columnWeight="1"/>
+                <Button android:text="4" android:layout_width="0dp" android:layout_columnWeight="1"/>
+                <Button android:text="5" android:layout_width="0dp" android:layout_columnWeight="1"/>
+                <Button android:text="6" android:layout_width="0dp" android:layout_columnWeight="1"/>
+                <Button android:text="7" android:layout_width="0dp" android:layout_columnWeight="1"/>
+                <Button android:text="8" android:layout_width="0dp" android:layout_columnWeight="1"/>
+                <Button android:text="9" android:layout_width="0dp" android:layout_columnWeight="1"/>
+
+            </GridLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+</ScrollView>

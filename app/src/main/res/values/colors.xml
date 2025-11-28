@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Paleta de colores amigable -->
+    <color name="primary">#2196F3</color> <!-- Azul amigable y moderno -->
+    <color name="primary_dark">#1976D2</color> <!-- Versión más oscura para la barra de estado -->
+    <color name="accent">#448AFF</color> <!-- Un azul más brillante para acentos -->
+    <color name="text_primary">#FFFFFF</color> <!-- Texto principal (blanco para AppBar) -->
+
+    <!-- Colores para las pantallas de ejemplo -->
+    <color name="window_background">#F5F7F8</color> <!-- Fondo de la ventana (gris claro) -->
+    <color name="card_background">#FFFFFF</color> <!-- Fondo de la tarjeta (blanco) -->
+    <color name="text_title">#212121</color> <!-- Títulos (gris oscuro) -->
+    <color name="text_body">#424242</color> <!-- Cuerpo de texto (gris medio) -->
+</resources>

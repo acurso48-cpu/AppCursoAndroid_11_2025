@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCursoAndroid">
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".layouts.LayoutsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".components.ComponentsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".lifecycle.LifecycleActivity"
+            android:exported="false" />
+        <activity
+            android:name=".navigation.NavigationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".recyclerview.RecyclerViewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".persistence.PersistenceActivity"
+            android:exported="false" />
+        <activity
+            android:name=".apis.ApisActivity"
+            android:exported="false" />
+        <activity
+            android:name=".permissions.PermissionsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".notifications.NotificationsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".layouts.examples.LinearLayoutExampleActivity"
+            android:exported="false" />
+        <activity
+            android:name=".layouts.examples.ConstraintLayoutExampleActivity"
+            android:exported="false" />
+        <activity
+            android:name=".layouts.examples.RelativeLayoutExampleActivity"
+            android:exported="false" />
+        <activity
+            android:name=".layouts.examples.FrameLayoutExampleActivity"
+            android:exported="false" />
+        <activity
+            android:name=".layouts.examples.TableLayoutExampleActivity"
+            android:exported="false" />
+        <activity
+            android:name=".layouts.examples.GridLayoutExampleActivity"
+            android:exported="false" />
+        <activity
+            android:name=".components.examples.TextViewExampleActivity"
+            android:exported="false" />
+        <activity
+            android:name=".components.examples.EditTextExampleActivity"
+            android:exported="false" />
+        <activity
+            android:name=".components.examples.ButtonExampleActivity"
+            android:exported="false" />
+        <activity
+            android:name=".components.examples.ImageViewExampleActivity"
+            android:exported="false" />
+        <activity
+            android:name=".components.examples.CheckboxRadioButtonExampleActivity"
+            android:exported="false" />
+        <activity
+            android:name=".components.examples.SwitchExampleActivity"
+            android:exported="false" />
+        <activity
+            android:name=".components.examples.SpinnerExampleActivity"
+            android:exported="false" />
+        <activity
+            android:name=".components.examples.ScrollExampleActivity"
+            android:exported="false" />
+        <activity
+            android:name=".components.examples.RecyclerViewExampleActivity"
+            android:exported="false" />
+        <activity
+            android:name=".components.examples.ListViewExampleActivity"
+            android:exported="false" />
+        <activity
+            android:name=".components.examples.GridViewExampleActivity"
+            android:exported="false" />
+        <activity
+            android:name=".fragments.FragmentsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".navigation.examples.NavigationFirstActivity"
+            android:exported="false" />
+        <activity
+            android:name=".navigation.examples.NavigationSecondActivity"
+            android:exported="false" />
+        <activity
+            android:name=".navigation.examples.NavComponentExampleActivity"
+            android:exported="false" />
+    </application>
+
+</manifest>

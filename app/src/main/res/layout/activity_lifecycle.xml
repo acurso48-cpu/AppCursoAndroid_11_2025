@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/window_background"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="La Activity y su Ciclo de Vida"
+            android:textColor="@color/text_title"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp"/>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardBackgroundColor="@color/card_background"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Una Activity es una pantalla única en una aplicación con la que el usuario puede interactuar. Es uno de los componentes fundamentales de Android y sirve como punto de entrada para que un usuario interactúe con la app."
+                    android:lineSpacingExtra="4dp"
+                    android:textColor="@color/text_body"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Body1" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="El ciclo de vida de una Activity es el conjunto de estados por los que pasa desde que se inicia hasta que se destruye. Comprenderlo es fundamental para crear apps robustas y eficientes."
+                    android:lineSpacingExtra="4dp"
+                    android:textColor="@color/text_body"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Body1" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="• onCreate(): Se llama una única vez. Es el lugar ideal para inflar el layout, inicializar vistas, configurar adapters y preparar los datos.\n\n• onStart(): La activity está a punto de ser visible. Aquí puedes registrar listeners o iniciar animaciones que solo deben ejecutarse cuando la app está en pantalla.\n\n• onResume(): La activity es visible y el usuario puede interactuar con ella. Es un buen lugar para iniciar tareas que requieren que la app esté en primer plano (ej: reproducir un vídeo).\n\n• onPause(): La activity pierde el foco pero sigue siendo parcialmente visible (ej: en modo multiventana). Aquí debes detener tareas que consuman muchos recursos (CPU, batería, red) y guardar datos no guardados.\n\n• onStop(): La activity ya no es visible para el usuario. Aquí debes liberar recursos que no son necesarios mientras la app está en segundo plano.\n\n• onRestart(): Se llama justo antes de onStart() cuando la activity vuelve a ser visible después de haber estado en onStop().\n\n• onDestroy(): Se llama antes de que la activity sea destruida. Es la última oportunidad para limpiar todos los recursos restantes."
+                    android:lineSpacingExtra="4dp"
+                    android:textColor="@color/text_body"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Body1" />
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Log de Eventos"
+            android:textColor="@color/text_title"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"/>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/card_background"
+            app:cardElevation="4dp">
+
+            <TextView
+                android:id="@+id/lifecycle_log_textview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="400dp"
+                android:padding="16dp"
+                android:scrollbars="vertical"
+                android:fadeScrollbars="false"
+                android:scrollbarThumbVertical="@drawable/scrollbar_thumb"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+                android:textColor="@color/text_body"/>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>
