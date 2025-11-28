@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/window_background"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Testing en Android"
+            android:textColor="@color/text_title"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp"/>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardBackgroundColor="@color/card_background"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="El testing es el proceso de verificar que el código de tu aplicación funciona como se espera. Es una práctica esencial para garantizar la calidad, evitar errores (bugs) y facilitar el mantenimiento a largo plazo."
+                    android:lineSpacingExtra="4dp"
+                    android:textColor="@color/text_body"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Body1" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Tipos Principales de Tests:\n• Tests Unitarios (Unit Tests): Prueban una única clase o función de forma aislada, sin depender del sistema Android. Son rápidos y se ejecutan en la JVM. Se encuentran en la carpeta `test`.\n\n• Tests de Instrumentación (Instrumented Tests): Prueban componentes de la app que dependen del framework de Android, como Activities, Fragments o la base de datos. Se ejecutan en un dispositivo o emulador y son más lentos. Se encuentran en la carpeta `androidTest`."
+                    android:lineSpacingExtra="4dp"
+                    android:textColor="@color/text_body"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Body1" />
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ejemplo Conceptual"
+            android:textColor="@color/text_title"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"/>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/card_background"
+            app:cardElevation="4dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:text="Los tests no se ejecutan visualmente en la app, sino a través de Gradle o desde Android Studio. Para ver un ejemplo, puedes explorar las carpetas `test` y `androidTest` en la estructura de tu proyecto. Allí encontrarás archivos de ejemplo generados por defecto."
+                android:lineSpacingExtra="4dp"
+                android:textColor="@color/text_body" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

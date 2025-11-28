@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.kuvuni.appcursoandroid.apis.ApisActivity
 import com.kuvuni.appcursoandroid.components.ComponentsActivity
 import com.kuvuni.appcursoandroid.fragments.FragmentsActivity
+import com.kuvuni.appcursoandroid.hardware.HardwareActivity
 import com.kuvuni.appcursoandroid.layouts.LayoutsActivity
 import com.kuvuni.appcursoandroid.lifecycle.LifecycleActivity
 import com.kuvuni.appcursoandroid.navigation.NavigationActivity
@@ -19,6 +20,7 @@ import com.kuvuni.appcursoandroid.notifications.NotificationsActivity
 import com.kuvuni.appcursoandroid.permissions.PermissionsActivity
 import com.kuvuni.appcursoandroid.persistence.PersistenceActivity
 import com.kuvuni.appcursoandroid.recyclerview.RecyclerViewActivity
+import com.kuvuni.appcursoandroid.testing.TestingActivity
 
 data class MainMenuItem(val title: String, val iconResId: Int, val activityClass: Class<*>)
 
@@ -38,11 +40,13 @@ class MainActivity : BaseActivity() {
             MainMenuItem("Lifecycle", android.R.drawable.ic_menu_rotate, LifecycleActivity::class.java),
             MainMenuItem("Intents y Navegación", R.drawable.ic_intents, NavigationActivity::class.java),
             MainMenuItem("RecyclerView", R.drawable.ic_components_recyclerview, RecyclerViewActivity::class.java),
+            MainMenuItem("Fragments", android.R.drawable.ic_input_get, FragmentsActivity::class.java),
             MainMenuItem("Persistence", android.R.drawable.ic_menu_save, PersistenceActivity::class.java),
             MainMenuItem("APIs", android.R.drawable.ic_menu_share, ApisActivity::class.java),
             MainMenuItem("Permissions", android.R.drawable.ic_lock_lock, PermissionsActivity::class.java),
             MainMenuItem("Notifications", android.R.drawable.ic_notification_overlay, NotificationsActivity::class.java),
-            MainMenuItem("Fragments", android.R.drawable.ic_input_get, FragmentsActivity::class.java)
+            MainMenuItem("Hardware", R.drawable.ic_hardware, HardwareActivity::class.java),
+            MainMenuItem("Testing", R.drawable.ic_testing, TestingActivity::class.java)
         )
 
         recyclerView.adapter = MainMenuAdapter(menuItems)
