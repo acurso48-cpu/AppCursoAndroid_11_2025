@@ -36,7 +36,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="RecyclerView es el componente más potente para mostrar listas. Su gran ventaja es que recicla las vistas, mejorando drásticamente el rendimiento.\n\nComponentes Clave:\n• Adapter: Es el puente entre tus datos (una lista de objetos, por ejemplo) y el RecyclerView. Su trabajo es tomar cada dato y prepararlo para que se muestre en un item de la lista.\n\n• ViewHolder: Optimiza el rendimiento. En lugar de buscar las vistas de un item (como TextView, ImageView, etc.) cada vez, el ViewHolder las guarda para un acceso rápido, evitando llamadas innecesarias a findViewById()."
+                    android:text="RecyclerView es el componente más importante para mostrar listas. Su gran ventaja es que recicla las vistas, mejorando drásticamente el rendimiento.\n\nConceptos Clave:\n• LayoutManager: Es el responsable de posicionar los elementos. Los más comunes son LinearLayoutManager (para listas) y GridLayoutManager (para cuadrículas)."
                     android:lineSpacingExtra="4dp"
                     android:textColor="@color/text_body"
                     android:textAppearance="@style/TextAppearance.MaterialComponents.Body1" />
@@ -55,14 +55,45 @@
 
         <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
-            android:layout_height="400dp"
+            android:layout_height="wrap_content"
             app:cardBackgroundColor="@color/card_background"
             app:cardElevation="4dp">
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recycler_view_example"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_view_example"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:padding="8dp">
+
+                    <Button
+                        android:id="@+id/btn_linear_layout_manager"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Lista"
+                        android:layout_marginEnd="8dp"/>
+
+                    <Button
+                        android:id="@+id/btn_grid_layout_manager"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Cuadrícula"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
 
         </com.google.android.material.card.MaterialCardView>
 
